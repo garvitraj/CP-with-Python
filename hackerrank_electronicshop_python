@@ -1,0 +1,27 @@
+budget = int(input()) #taking budget
+mok= int(input())      # taking rates of keybord
+nod = int(input())  # taking rates of drives
+keyboardPrice = []
+drivesPrice = []
+sumit = 0
+maximum = 0
+price = []
+
+for i in range (0,mok):   # taking input in list
+    temp = int(input())
+    keyboardPrice.append(temp)
+
+for i in range (0,nod):
+    tem = int(input())
+    drivesPrice.append(tem)
+
+for i in range (0,mok):
+    for j in range (0,nod):
+         if(sumit >= maximum and sumit <= budget):
+                    maximum = sumit
+
+if (maximum == 0) : 
+    notBuy = -1
+    print(notBuy)
+
+print (maximum)
