@@ -1,0 +1,24 @@
+def noidea(n,setA,setB):
+    for i in n: #here running loop for i to check weather i is present in A/B or not
+        if i in A:
+            yield 1
+        elif i in B:
+            yield -1
+        else:
+            yield 0
+
+x,y = map(int, raw_input().split()) 
+#here map() function executes a specified function for each item in an iterable.The item is sent to the function as a parameter.
+# syntax of map function is = map(function, iterables)
+#split() convert string to list
+
+n = map(int, raw_input().split())
+setA = set(map(int, raw_input().split()))
+setB = set(map(int, raw_input().split()))
+happiness = 0
+
+for i in gen(n,A,B):
+    happiness += i
+
+
+print (happiness)
